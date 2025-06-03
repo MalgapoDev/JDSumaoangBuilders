@@ -316,10 +316,6 @@ const Service = () => {
                             <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Landscaping</span>
                         </div>
-
-                        <div style={{textAlign: isMobile ? 'center' : 'left', marginTop: '30px'}}>
-                            <a href='/project' style={buttonStyle}>View Projects</a>
-                        </div>
                     </div>
                 </div>
             </div>
