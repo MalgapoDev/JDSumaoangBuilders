@@ -4,6 +4,7 @@ import Heropage from './pages/Heropage'
 import About from './pages/About'
 import Service from './pages/Service'
 import Projects from './pages/Projects'
+import Contacts from './pages/Contacts'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
@@ -17,6 +18,7 @@ function App() {
     <About />
     <Service />
     <Projects />
+    <Contacts />
     </>
   )
 }
