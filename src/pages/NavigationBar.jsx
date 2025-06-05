@@ -119,11 +119,11 @@ function NavigationBar() {
 
             {/* Mobile Menu */}
             <div style={mobileMenuStyle}>
-                <a onClick={() => scrollToSection('#hero')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Home</a>
-                <a onClick={() => scrollToSection('#about')} style={{...mobileLinkStyle, cursor: 'pointer'}}>About</a>
-                <a onClick={() => scrollToSection('#service')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Services</a>
-                <a onClick={() => scrollToSection('#projects')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Projects</a>
-                <a onClick={() => scrollToSection('#contact')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Contact</a>
+                <a onClick={() => scrollToSection('hero')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Home</a>
+                <a onClick={() => scrollToSection('about')} style={{...mobileLinkStyle, cursor: 'pointer'}}>About</a>
+                <a onClick={() => scrollToSection('service')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Services</a>
+                <a onClick={() => scrollToSection('projects')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Projects</a>
+                <a onClick={() => scrollToSection('contact')} style={{...mobileLinkStyle, cursor: 'pointer'}}>Contact</a>
             </div>
 
             {/* Desktop Navigation Links */}
