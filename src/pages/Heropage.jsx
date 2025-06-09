@@ -60,12 +60,12 @@ const Heropage = () => {
                        fontFamily: 'Quicksand',
                        fontWeight: 'bold',
                        color: 'white',
-                       }}>Strong foundations, bold designs, and lasting</p>
+                       }}>Strong foundations, bold designs, and lasting partnerships </p>
 
                 <p style={{fontSize: '20px',
                      fontFamily: 'Quicksand', 
                      fontWeight: 'bold', 
-                     color: 'white',}}>partnerships that’s how we build better every day.</p>
+                     color: 'white',}}>that’s how we build better every day.</p>
 
                 <div className="button-container" style={buttonContainer}>
                     <a href="#inquiries" style={buttonStyle}
