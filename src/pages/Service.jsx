@@ -73,10 +73,6 @@ const Service = () => {
         marginBottom: '5px'
     };
 
-    const bulletPointStyle = {
-        marginRight: '10px'
-    };
-
     const buttonStyle = {
         backgroundColor: '#e63946',
         color: 'white',
@@ -109,15 +105,12 @@ const Service = () => {
                         <div style={categoryStyle}>
                             <h3 style={categoryTitleStyle}>Buildings:</h3>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Residential</span>
                             </div>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Commercial</span>
                             </div>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Industrial</span>
                             </div>
                         </div>
@@ -125,7 +118,6 @@ const Service = () => {
                         <div style={categoryStyle}>
                             <h3 style={categoryTitleStyle}>Warehouse Storage:</h3>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Institutional</span>
                             </div>
                             <div style={{paddingLeft: '20px'}}>
@@ -137,19 +129,15 @@ const Service = () => {
                         <div style={categoryStyle}>
                             <h3 style={categoryTitleStyle}>Educational & Recreational:</h3>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>School</span>
                             </div>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Event Center</span>
                             </div>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Civil Center</span>
                             </div>
                             <div style={listItemStyle}>
-                                <span style={bulletPointStyle}>•</span>
                                 <span style={labelStyle}>Church</span>
                             </div>
                         </div>
@@ -161,11 +149,9 @@ const Service = () => {
                             <div style={{...categoryStyle, marginTop: '53px'}}>
                                 <h3 style={categoryTitleStyle}>Agricultural:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Poultry & Piggery</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Grain Mill</span>
                                 </div>
                             </div>
@@ -173,23 +159,18 @@ const Service = () => {
                             <div style={categoryStyle}>
                                 <h3 style={categoryTitleStyle}>Horizontal Construction:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Roads</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Bridges</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Drainage</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Slope Protection</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Other similar projects</span>
                                 </div>
                             </div>
@@ -197,19 +178,15 @@ const Service = () => {
                             <div style={categoryStyle}>
                                 <h3 style={categoryTitleStyle}>Others:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Garage</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Swimming Pool</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Fence</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Water Distribution System</span>
                                 </div>
                             </div>
@@ -222,11 +199,9 @@ const Service = () => {
                             <div style={categoryStyle}>
                                 <h3 style={categoryTitleStyle}>Agricultural:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Poultry & Piggery</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Grain Mill</span>
                                 </div>
                             </div>
@@ -234,23 +209,18 @@ const Service = () => {
                             <div style={categoryStyle}>
                                 <h3 style={categoryTitleStyle}>Horizontal Construction:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Roads</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Bridges</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Drainage</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Slope Protection</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Other similar projects</span>
                                 </div>
                             </div>
@@ -258,19 +228,15 @@ const Service = () => {
                             <div style={categoryStyle}>
                                 <h3 style={categoryTitleStyle}>Others:</h3>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Garage</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Swimming Pool</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Fence</span>
                                 </div>
                                 <div style={listItemStyle}>
-                                    <span style={bulletPointStyle}>•</span>
                                     <span style={labelStyle}>Water Distribution System</span>
                                 </div>
                             </div>
@@ -281,39 +247,30 @@ const Service = () => {
                     <div style={columnStyle}>
                         <h2 style={sectionTitleStyle}>Services Offered:</h2>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Construction</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Renovation/<br/>Rehabilitation</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Extension</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Retrofitting</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Repair & Maintenance</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Finishing Works</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Building Completion</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Demolition</span>
                         </div>
                         <div style={listItemStyle}>
-                            <span style={bulletPointStyle}>•</span>
                             <span style={labelStyle}>Landscaping</span>
                         </div>
                     </div>
