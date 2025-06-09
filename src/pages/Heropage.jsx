@@ -1,8 +1,14 @@
-import React from "react";
+import React, {useEffect} from "react";
 import HeroImage from '../assets/builderImage.jpg';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 
 const Heropage = () => {
+
+    useEffect(() => {
+        Aos.init({ duration: 2000 });
+    }, []);
 
     const heroBackground = {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${HeroImage})`,
@@ -54,20 +60,20 @@ const Heropage = () => {
                 <h1 style={{fontSize: '54px',
                      fontFamily: 'Poppins', 
                      fontWeight: 'bold',
-                     }}>JD Sumaoang Builders </h1>
+                     }} data-aos="fade-down">JD Sumaoang Builders </h1>
 
                 <p style={{fontSize: '20px',
                        fontFamily: 'Quicksand',
                        fontWeight: 'bold',
                        color: 'white',
-                       }}>Strong foundations, bold designs, and lasting partnerships </p>
+                       }} data-aos="fade-down">Strong foundations, bold designs, and lasting partnerships </p>
 
                 <p style={{fontSize: '20px',
                      fontFamily: 'Quicksand', 
                      fontWeight: 'bold', 
-                     color: 'white',}}>that’s how we build better every day.</p>
+                     color: 'white',}} data-aos="fade-down">that’s how we build better every day.</p>
 
-                <div className="button-container" style={buttonContainer}>
+                <div className="button-container" style={buttonContainer} data-aos="zoom-in">
                     <a href="#inquiries" style={buttonStyle}
                         onMouseOver={(e) => e.target.style.backgroundColor = '#d62839'}
                         onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}>

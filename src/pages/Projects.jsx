@@ -4,6 +4,7 @@ import projectImage2 from '../assets/project2.jpg';
 import projectImage3 from '../assets/project3.jpg';
 
 const Projects = () => {
+
     const cardProjects = [
         {
             id: 1,

@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react'
+import React from 'react'
 //import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import NavigationBar from './components/NavigationBar'
 import Heropage from './pages/Heropage'
@@ -10,25 +10,18 @@ import Footer from './components/Footer'
 import "slick-carousel/slick/slick.css"; 
 import "slick-carousel/slick/slick-theme.css";
 
-//import AOS from 'aos';
-//import 'aos/dist/aos.css';
-
 function App() {
 
-  /*useEffect(() => {
-    AOS.init({durartion: 1000});
-  }, []);*/
-
   return (
-    <>
-    <NavigationBar/>
-    <Heropage/>
-    <About/>
-    <Service/>
-    <Projects/>
-    <Contacts/>
-    <Footer/>
-    </>
+    <div className="App">
+      <NavigationBar />
+      <Heropage />
+      <About />
+      <Service />
+      <Projects />
+      <Contacts />
+      <Footer />
+    </div>
   )
 }
 

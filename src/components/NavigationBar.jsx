@@ -17,7 +17,7 @@ function NavigationBar() {
     const scrollToSection = (sectionId) => {
         const element = document.getElementById(sectionId);
         if (element) {
-            element.scrollIntoView({ behavior: 'smooth' });
+            element.scrollIntoView({ behavior: 'smooth', duration: 2000 });
             // Close menu after clicking (for mobile)
             if (menuOpen) setMenuOpen(false);
         }

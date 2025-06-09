@@ -1,8 +1,10 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import companyLogo from '../assets/profile.jpg';
 
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+  const [isVisible, setIsVisible] = useState(false);
+  const aboutRef = useRef(null);
 
   useEffect(() => {
     const handleResize = () => {
@@ -12,6 +14,30 @@ const About = () => {
     window.addEventListener('resize', handleResize);
     return () => {
       window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+        }
+      },
+      {
+        threshold: 0.1,
+        rootMargin: '50px'
+      }
+    );
+
+    if (aboutRef.current) {
+      observer.observe(aboutRef.current);
+    }
+
+    return () => {
+      if (aboutRef.current) {
+        observer.unobserve(aboutRef.current);
+      }
     };
   }, []);
   
@@ -26,6 +52,7 @@ const About = () => {
     justifyContent: 'center',
     alignItems: 'center',
     padding: isMobile ? '2rem 1rem' : '2rem',
+    overflow: 'visible',
   };
 
   const contentContainer = {
@@ -46,6 +73,10 @@ const About = () => {
     justifyContent: 'center',
     alignItems: 'center',
     marginBottom: isMobile ? '2rem' : '0',
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0)' : 'translateX(-50px)',
+    transition: 'all 0.8s ease-out',
+    transitionDelay: '0.2s'
   };
 
   const textContainer = {
@@ -55,6 +86,10 @@ const About = () => {
     alignItems: 'center',
     marginLeft: isMobile ? '0' : isTablet ? '50px' : '100px',
     width: isMobile ? '100%' : 'auto',
+    opacity: isVisible ? 1 : 0,
+    transform: isVisible ? 'translateX(0)' : 'translateX(50px)',
+    transition: 'all 0.8s ease-out',
+    transitionDelay: '0.4s'
   };
 
   const logoStyle = {
@@ -84,7 +119,7 @@ const About = () => {
   };
 
   return (
-    <div id='about' style={aboutBackground}>
+    <div id='about' style={aboutBackground} ref={aboutRef}>
       <div style={contentContainer}>
         <div style={logoContainer}>
           <img src={companyLogo} alt="Company Logo" style={logoStyle} />
