@@ -3,7 +3,7 @@ import companyLogo from '../assets/profile.jpg';
 
 const About = () => {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  
+
   useEffect(() => {
     const handleResize = () => {
       setWindowWidth(window.innerWidth);
@@ -18,7 +18,6 @@ const About = () => {
   const isMobile = windowWidth < 768;
   const isTablet = windowWidth >= 768 && windowWidth < 1024;
 
-  // Responsive styles based on device size
   const aboutBackground = {
     backgroundColor: '#212121',
     minHeight: '100vh',

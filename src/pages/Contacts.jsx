@@ -25,7 +25,7 @@ const Contacts = () => {
     );
 
     const contactBackground = {
-        backgroundImage: `url(${contactImage})`,
+        backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${contactImage})`,
         backgroundSize: 'cover',
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
@@ -103,7 +103,6 @@ const Contacts = () => {
         flexShrink: 0,
     };
 
-    // Responsive styles
     const mobileStyles = `
         @media (max-width: 768px) {
             .contact-title {
@@ -117,13 +116,6 @@ const Contacts = () => {
             }
             .contact-content {
                 padding: 2rem !important;
-            }
-            .footer-content {
-                flex-direction: column !important;
-                gap: 30px !important;
-            }
-            .footer-section {
-                width: 100% !important;
             }
             .main-content {
                 flex-direction: column !important;
@@ -153,106 +145,8 @@ const Contacts = () => {
             .contact-icon {
                 margin-top: 0 !important;
             }
-            .footer-content {
-                padding: 20px !important;
-            }
-            .footer-heading {
-                font-size: 16px !important;
-            }
-            .footer-text {
-                font-size: 12px !important;
-            }
         }
     `;
-
-    // Footer Styles
-    const footerStyle = {
-        backgroundColor: '#212121',
-        color: 'white',
-        padding: '0',
-        width: '100%',
-    };
-
-    const footerContentStyle = {
-        display: 'flex',
-        justifyContent: 'space-between',
-        alignItems: 'flex-start',
-        padding: '40px 20px',
-        maxWidth: '1200px',
-        margin: '0 auto',
-        gap: '40px',
-        flexWrap: 'wrap',
-    };
-
-    const footerSectionStyle = {
-        flex: '1',
-        minWidth: '250px',
-        marginBottom: '20px',
-    };
-
-    const footerHeadingStyle = {
-        fontSize: '18px',
-        fontFamily: 'Poppins',
-        fontWeight: 'bold',
-        marginBottom: '15px',
-        color: '#ecf0f1',
-    };
-
-    const footerTextStyle = {
-        fontSize: '14px',
-        fontFamily: 'Quicksand',
-        lineHeight: '1.6',
-        color: '#bdc3c7',
-        margin: '0',
-    };
-
-    const footerListStyle = {
-        listStyle: 'none',
-        padding: '0',
-        margin: '0',
-    };
-
-    const footerListItemStyle = {
-        fontSize: '14px',
-        fontFamily: 'Quicksand',
-        color: '#bdc3c7',
-        marginBottom: '8px',
-        paddingLeft: '0',
-    };
-
-    const footerContactStyle = {
-        display: 'flex',
-        alignItems: 'center',
-        gap: '10px',
-        marginBottom: '10px',
-    };
-
-    const footerContactTextStyle = {
-        fontSize: '14px',
-        fontFamily: 'Quicksand',
-        color: '#bdc3c7',
-    };
-
-    const footerScheduleStyle = {
-        fontSize: '14px',
-        fontFamily: 'Quicksand',
-        color: '#bdc3c7',
-        margin: '5px 0',
-    };
-
-    const footerBottomStyle = {
-        borderTop: '1px solid #34495e',
-        backgroundColor: '#212121',
-        padding: '20px',
-        textAlign: 'center',
-    };
-
-    const footerCopyrightStyle = {
-        fontSize: '12px',
-        fontFamily: 'Quicksand',
-        color: '#95a5a6',
-        margin: '0',
-    };
 
     return (
         <>
@@ -294,60 +188,6 @@ const Contacts = () => {
                     </div>
                 </div>
             </div>
-            
-            {/* Footer Section */}
-            <footer style={footerStyle}>
-                <div style={footerContentStyle}>
-                    <div className='footer-section' style={footerSectionStyle}>
-                        <h4 className='footer-heading' style={footerHeadingStyle}>JD Sumaoang Builders</h4>
-                        <p className='footer-text' style={footerTextStyle}>
-                            Your trusted partner in construction. Building dreams with quality, 
-                            reliability, and excellence since our establishment.
-                        </p>
-                    </div>
-                    
-                    <div className='footer-section' style={footerSectionStyle}>
-                        <h4 className='footer-heading' style={footerHeadingStyle}>Our Services</h4>
-                        <ul style={footerListStyle}>
-                            <li className='footer-text' style={footerListItemStyle}>Residential Construction</li>
-                            <li className='footer-text' style={footerListItemStyle}>Commercial Building</li>
-                            <li className='footer-text' style={footerListItemStyle}>Home Renovation</li>
-                            <li className='footer-text' style={footerListItemStyle}>Interior Design</li>
-                            <li className='footer-text' style={footerListItemStyle}>Project Management</li>
-                        </ul>
-                    </div>
-                    
-                    <div className='footer-section' style={footerSectionStyle}>
-                        <h4 className='footer-heading' style={footerHeadingStyle}>Quick Contact</h4>
-                        <div style={footerContactStyle}>
-                            <MapIcon />
-                            <span style={footerContactTextStyle}>Santa Ignacia, Tarlac City</span>
-                        </div>
-                        <div style={footerContactStyle}>
-                            <PhoneIcon />
-                            <span style={footerContactTextStyle}>0956 608 7639</span>
-                        </div>
-                        <div style={footerContactStyle}>
-                            <MailIcon />
-                            <span style={footerContactTextStyle}>jdsumaoangbuilders@gmail.com</span>
-                        </div>
-                    </div>
-                    
-                    <div className='footer-section' style={footerSectionStyle}>
-                        <h4 className='footer-heading' style={footerHeadingStyle}>Build it thru:</h4>
-                        <div className='footer-text' style={footerTextStyle}>
-                            <p className='footer-text' style={footerScheduleStyle}>PAG - IBIG Loan</p>
-                            <p className='footer-text' style={footerScheduleStyle}>Bank Loan</p>
-                        </div>
-                    </div>
-                </div>
-                
-                <div style={footerBottomStyle}>
-                    <p style={footerCopyrightStyle}>
-                        © 2025 JD Sumaoang Builders. All rights reserved. | Licensed & Insured Construction Company
-                    </p>
-                </div>
-            </footer>
         </>
     );
 };
