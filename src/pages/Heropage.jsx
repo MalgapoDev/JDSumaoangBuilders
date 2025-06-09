@@ -39,7 +39,7 @@ const Heropage = () => {
         fontSize: 'clamp(14px, 2vw, 16px)',
         fontWeight: 'bold',
         cursor: 'pointer',
-        marginTop: '30px',
+        marginTop: '20px',
         fontFamily: 'Poppins',
         display: 'inline-block',
         textDecoration: 'none',
@@ -57,18 +57,18 @@ const Heropage = () => {
     return (
         <div id="hero" className="hero" style={heroBackground}>
             <div className="hero-content" style={contentStyle}>
-                <h1 style={{fontSize: '54px',
+                <h1 style={{fontSize: '52px',
                      fontFamily: 'Poppins', 
                      fontWeight: 'bold',
                      }} data-aos="fade-down">JD Sumaoang Builders </h1>
 
-                <p style={{fontSize: '20px',
+                <p style={{fontSize: '18px',
                        fontFamily: 'Quicksand',
                        fontWeight: 'bold',
                        color: 'white',
                        }} data-aos="fade-down">Strong foundations, bold designs, and lasting partnerships </p>
 
-                <p style={{fontSize: '20px',
+                <p style={{fontSize: '18px',
                      fontFamily: 'Quicksand', 
                      fontWeight: 'bold', 
                      color: 'white',}} data-aos="fade-down">that’s how we build better every day.</p>
