@@ -81,7 +81,7 @@ function NavigationBar() {
         <nav className='navbar' style={{
             display: 'flex', 
             justifyContent: 'space-between', 
-            width: '100%',
+            width: '100vw',
             height: '64px',
             color: 'white', 
             position: 'fixed', 
@@ -94,11 +94,11 @@ function NavigationBar() {
             <div className='navbar-logo' style={{
                 display: 'flex', 
                 alignItems: 'center', 
-                padding: '0px 12px'
+                padding: '0px 15px'
             }}>
                 <img src={profile} alt='logo' style={{
-                    width: '40px', 
-                    height: '40px', 
+                    width: '45px', 
+                    height: '45px', 
                     borderRadius: '50%', 
                     objectFit: 'cover'
                 }} />

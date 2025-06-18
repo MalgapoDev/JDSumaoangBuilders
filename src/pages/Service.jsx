@@ -36,7 +36,7 @@ const Service = () => {
         fontSize: isMobile ? '28px' : '40px',
         fontWeight: 'bold',
         textAlign: 'center',
-        marginBottom: isMobile ? '30px' : '60px'
+        marginBottom: isMobile ? '30px' : '60px',
     };
 
     const columnsContainerStyle = {
@@ -71,19 +71,6 @@ const Service = () => {
         display: 'flex',
         alignItems: 'flex-start',
         marginBottom: '5px'
-    };
-
-    const buttonStyle = {
-        backgroundColor: '#e63946',
-        color: 'white',
-        padding: isMobile ? '10px 20px' : '12px 24px',
-        borderRadius: '8px',
-        border: 'none',
-        fontSize: isMobile ? '14px' : '16px',
-        fontWeight: 'bold',
-        cursor: 'pointer',
-        marginTop: '30px',
-        fontFamily: 'Poppins',
     };
 
     const labelStyle = {

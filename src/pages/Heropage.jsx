@@ -1,7 +1,5 @@
 import React, {useEffect} from "react";
 import HeroImage from '../assets/builderImage.jpg';
-import Aos from 'aos';
-import 'aos/dist/aos.css';
 
 
 const Heropage = () => {
@@ -77,7 +75,7 @@ const Heropage = () => {
                     <a href="#inquiries" style={buttonStyle}
                         onMouseOver={(e) => e.target.style.backgroundColor = '#d62839'}
                         onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}>
-                            Get Inquiries</a>
+                            Get In Touch</a>
                 </div>
             </div>
         </div>
