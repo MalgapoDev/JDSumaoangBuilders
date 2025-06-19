@@ -1,12 +1,11 @@
 import React, {useEffect} from "react";
+import { useNavigate } from "react-router-dom";
 import HeroImage from '../assets/builderImage.jpg';
 
 
 const Heropage = () => {
 
-    useEffect(() => {
-        Aos.init({ duration: 2000 });
-    }, []);
+    const navigate = useNavigate();
 
     const heroBackground = {
         backgroundImage: `linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(${HeroImage})`,
@@ -72,9 +71,10 @@ const Heropage = () => {
                      color: 'white',}} data-aos="fade-down">that’s how we build better every day.</p>
 
                 <div className="button-container" style={buttonContainer} data-aos="zoom-in">
-                    <a href="#inquiries" style={buttonStyle}
+                    <a style={buttonStyle}
                         onMouseOver={(e) => e.target.style.backgroundColor = '#d62839'}
-                        onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}>
+                        onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}
+                        onClick={() => navigate('/get-in-touch')}>
                             Get In Touch</a>
                 </div>
             </div>

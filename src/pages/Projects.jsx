@@ -1,9 +1,11 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import projectImage1 from '../assets/project1.jpg';
 import projectImage2 from '../assets/project2.jpg';
 import projectImage3 from '../assets/project3.jpg';
 
 const Projects = () => {
+    const navigate = useNavigate();
 
     const cardProjects = [
         {
@@ -202,9 +204,9 @@ const Projects = () => {
                 <div className='button-container' style={buttonContainer}>
                     <a 
                         style={buttonStyle} 
-                        href='#ViewProject'
                         onMouseOver={(e) => e.target.style.backgroundColor = '#d62839'}
                         onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}
+                        onClick={() => navigate('/notfound')}
                     >
                         See more projects
                     </a>
