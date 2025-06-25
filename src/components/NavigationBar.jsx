@@ -48,6 +48,7 @@ function NavigationBar() {
 
     const mobileMenuStyle = {
         display: isMobile && menuOpen ? 'flex' : 'none',
+        alignItems: 'center',
         flexDirection: 'column',
         position: 'absolute',
         top: '64px',
