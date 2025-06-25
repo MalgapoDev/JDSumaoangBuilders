@@ -46,8 +46,8 @@ const Projects = () => {
         padding: '1.5rem',
         width: '100%',
         maxWidth: '1200px',
-        boxShadow: '0 4px 8px rgba(0, 0, 0, 0.2)',
-        border: '1px solid #ccc',
+        boxShadow: '0 6px 10px rgba(0, 0, 0, 0.2)',
+        
     };
 
     const projectGrid = {
@@ -79,7 +79,7 @@ const Projects = () => {
 
     const projectImageContainer = {
         width: '100%',
-        height: '150px',
+        height: '200px',
         marginBottom: '10px',
         overflow: 'hidden',
         borderRadius: '5px',

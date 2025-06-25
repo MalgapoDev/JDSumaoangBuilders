@@ -127,18 +127,20 @@ const About = () => {
         
         <div style={textContainer}>
           <h1 style={headingStyle}>What is JD Sumaoang Builders?</h1>
-          <p style={paragraphStyle}>
-            JD Sumaoang Builders is a proudly established construction company committed to excellence, 
-            integrity, and innovation. With years of experience in the industry, we specialize in residential, 
-            commercial, and industrial projects—bringing visions to life with unmatched precision and craftsmanship.
-          </p>
+          <div style={{backgroundColor: '#212121', padding: '20px', borderRadius: '10px', boxShadow: '0 10px 15px rgba(0, 0, 0, 0.3)'}}>
+            <p style={paragraphStyle}>
+              JD Sumaoang Builders is a proudly established construction company committed to excellence, 
+              integrity, and innovation. With years of experience in the industry, we specialize in residential, 
+              commercial, and industrial projects—bringing visions to life with unmatched precision and craftsmanship.
+            </p>
           
-          <p style={paragraphStyle}>
-            Our team of skilled professionals is dedicated to delivering high-quality construction services, 
-            ensuring that every project is completed on time and within budget. We believe in building strong 
-            relationships with our clients, understanding their unique needs, and providing tailored solutions 
-            that exceed expectations.
-          </p>
+            <p style={paragraphStyle}>
+              Our team of skilled professionals is dedicated to delivering high-quality construction services, 
+              ensuring that every project is completed on time and within budget. We believe in building strong 
+              relationships with our clients, understanding their unique needs, and providing tailored solutions 
+              that exceed expectations.
+            </p>
+          </div>
         </div>
       </div>
     </div>
