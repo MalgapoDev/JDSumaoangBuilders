@@ -206,7 +206,7 @@ const Projects = () => {
                         style={buttonStyle} 
                         onMouseOver={(e) => e.target.style.backgroundColor = '#d62839'}
                         onMouseOut={(e) => e.target.style.backgroundColor = '#e63946'}
-                        onClick={() => navigate('/notfound')}
+                        onClick={() => navigate('/view-projects')}
                     >
                         See more projects
                     </a>

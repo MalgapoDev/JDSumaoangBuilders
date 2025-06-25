@@ -1,12 +1,13 @@
-import React, { useRef } from "react";
-import { Link, useLocation } from "react-router-dom";
-import {TextField, Button} from '@mui/material';
+import React, { useRef, useState } from "react";
+import { TextField, Button, Snackbar, Alert } from '@mui/material';
+import SendIcon from '@mui/icons-material/Send';
 import emailjs from "@emailjs/browser";
 
 const ContactForm = () => {
-
     const form = useRef();
-    const location = useLocation();
+
+    // Snackbar alert state
+    const [alert, setAlert] = useState({ open: false, severity: "", message: "" });
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -19,14 +20,25 @@ const ContactForm = () => {
         )
         .then((result) => {
             console.log("SUCCESS!", result.text);
-            alert("Message sent successfully!");
+            setAlert({
+                open: true,
+                severity: "success",
+                message: "Your message has been sent successfully!"
+            });
             form.current.reset();
-            
         }, (error) => {
             console.error("FAILED...", error.text);
-            alert("Failed to send message.");
-            }
-        );
+            setAlert({
+                open: true,
+                severity: "error",
+                message: "There was a problem sending your message. Please try again."
+            });
+        });
+    };
+
+    const handleCloseAlert = (event, reason) => {
+        if (reason === 'clickaway') return;
+        setAlert({ ...alert, open: false });
     };
 
     const contactFormStyle = {
@@ -42,11 +54,10 @@ const ContactForm = () => {
     const HeaderText = {
         fontSize: '24px',
         fontWeight: 'bold',
-        marginBottom: '20px',
         textAlign: 'center',
         color: '#fff',
-        textAlign: 'center',
         fontFamily: 'Poppins',
+        marginTop: '30px',
     };
 
     const contentStyle = {
@@ -58,77 +69,66 @@ const ContactForm = () => {
     };
 
     const paragraphStyle = {
-        fontSize: '16px',
+        fontSize: '14px',
         color: '#fff',
         textAlign: 'center',
-        marginBottom: '20px',
         fontFamily: 'Poppins',
         fontWeight: 'normal',
+        marginTop: '20px',
     };
 
     const FormStyle = {
         display: 'flex',
         flexDirection: 'column',
-        gap: '1rem',
         marginTop: '20px',
         backgroundColor: '#ffffff',
         opacity: '0.75',
-        padding: '2rem',
+        padding: '0.75rem',
         borderRadius: '10px',
     };
 
     return (
-        <>
-        <div id="get-in-touch" className="contact-form-container" style={contactFormStyle}>
-            <div className="contact-form-content" style={contentStyle}>
-                <h2 style={HeaderText}>Get in Touch with Us</h2>
-                <p style={paragraphStyle}>We'd love to hear from you. Please fill out the form or check out our contact information.</p>
+        <>            
+            <div id="get-in-touch" className="contact-form-container" style={contactFormStyle}>
+                <div className="contact-form-content" style={contentStyle}>
 
-                <div className="contact-form" style={FormStyle}>
-                    <form ref={form} onSubmit={sendEmail}>
-                        <TextField 
-                            label="Name"
-                            name="name" 
-                            variant="outlined"
-                            margin="normal" fullWidth required 
-                            placeholder="John Doe"/>
+                    <h2 style={HeaderText}>Get in Touch with Us</h2>
+                    <p style={paragraphStyle}>We'd love to hear from you. Please fill out the form or check out our contact information.</p>
 
-                        <TextField 
-                            label="Email" 
-                            name="email" 
-                            variant="outlined" 
-                            margin="normal" 
-                            fullWidth required 
-                            placeholder="sample@gmail.com"/>
+                    <div className="contact-form" style={FormStyle}>
+                        <form ref={form} onSubmit={sendEmail}>
+                            <TextField label="Name" name="name" variant="outlined" margin="normal" fullWidth required placeholder="John Doe"/>
+                            <TextField label="Email" name="email" variant="outlined" margin="normal" fullWidth required placeholder="sample@gmail.com"/>
+                            <TextField label="Subject" name="subject" variant="outlined" margin="normal" fullWidth required />
+                            <TextField label="Message" name="message" variant="outlined" multiline rows={3} margin="normal" fullWidth required />
 
-                        <TextField 
-                            label="Subject"
-                             name="subject" 
-                             variant="outlined"
-                              margin="normal" 
-                              fullWidth required />
-
-                        <TextField 
-                            label="Message" 
-                            name="message" 
-                            variant="outlined" 
-                            multiline rows={4} 
-                            margin="normal" 
-                            fullWidth required />
-
-                        <Button 
-                            type="submit" 
-                            variant="contained" 
-                            style={{ backgroundColor: '#e63946', color: 'white', marginTop: '20px' }}>
-                            Send
-                        </Button>
-                    </form>
+                            <Button 
+                                type="submit" 
+                                variant="contained"
+                                endIcon={<SendIcon />}
+                                fullWidth
+                                style={{ backgroundColor: '#C75B7A', color: 'white', marginTop: '20px' }}
+                            >
+                                Send Message
+                            </Button>
+                        </form>
+                    </div>
                 </div>
-
             </div>
-        </div>
+
+            {/* Snackbar Notification */}
+            <Snackbar 
+                open={alert.open} 
+                autoHideDuration={4000} 
+                onClose={handleCloseAlert}
+                anchorOrigin={{ vertical: 'bottom', horizontal: 'left' }}
+            >
+                <Alert onClose={handleCloseAlert} severity={alert.severity} sx={{ width: '100%' }}>
+                    {alert.message}
+                </Alert>
+            </Snackbar>
         </>
     );
-}
+};
 
 export default ContactForm;
