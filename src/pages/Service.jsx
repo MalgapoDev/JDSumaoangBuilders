@@ -48,17 +48,23 @@ const Service = () => {
 
     const columnStyle = {
         flex: 1,
-        width: isMobile ? '100%' : 'auto'
+        width: isMobile ? '100%' : 'auto',
+        borderRadius: '10px',
+        padding: '10px',
     };
 
     const sectionTitleStyle = {
         fontSize: isMobile ? '22px' : '24px',
         fontWeight: 'bold',
-        marginBottom: isMobile ? '20px' : '30px'
+        marginBottom: isMobile ? '20px' : '30px',
+        textAlign: 'center'
     };
 
     const categoryStyle = {
-        marginBottom: isMobile ? '20px' : '30px'
+        marginBottom: isMobile ? '20px' : '30px',
+        backgroundColor: '#2c2c2c',
+        padding: '20px',
+        borderRadius: '10px'
     };
 
     const categoryTitleStyle = {
@@ -233,32 +239,41 @@ const Service = () => {
                     {/* Right Column - Services Offered */}
                     <div style={columnStyle}>
                         <h2 style={sectionTitleStyle}>Services Offered:</h2>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Construction</span>
+
+                        <div style={categoryStyle}>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Construction</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Renovation/<br/>Rehabilitation</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Extension</span>
+                            </div>
                         </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Renovation/<br/>Rehabilitation</span>
+
+                        <div style={categoryStyle}>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Retrofitting</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Repair & Maintenance</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Finishing Works</span>
+                            </div>
                         </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Extension</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Retrofitting</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Repair & Maintenance</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Finishing Works</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Building Completion</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Demolition</span>
-                        </div>
-                        <div style={listItemStyle}>
-                            <span style={labelStyle}>Landscaping</span>
+
+                        <div style={categoryStyle}>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Building Completion</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Demolition</span>
+                            </div>
+                            <div style={listItemStyle}>
+                                <span style={labelStyle}>Landscaping</span>
+                            </div>
                         </div>
                     </div>
                 </div>
