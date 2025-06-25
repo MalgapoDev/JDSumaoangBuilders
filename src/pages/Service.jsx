@@ -64,7 +64,8 @@ const Service = () => {
         marginBottom: isMobile ? '20px' : '30px',
         backgroundColor: '#2c2c2c',
         padding: '20px',
-        borderRadius: '10px'
+        borderRadius: '10px',
+        border: '1px solid #ccc'
     };
 
     const categoryTitleStyle = {
@@ -139,7 +140,7 @@ const Service = () => {
                     {/* Middle Column - Only show separate column if not mobile */}
                     {!isMobile && (
                         <div style={columnStyle}>
-                            <div style={{...categoryStyle, marginTop: '53px'}}>
+                            <div style={{...categoryStyle, marginTop: '50px'}}>
                                 <h3 style={categoryTitleStyle}>Agricultural:</h3>
                                 <div style={listItemStyle}>
                                     <span style={labelStyle}>Poultry & Piggery</span>
