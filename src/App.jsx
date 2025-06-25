@@ -12,6 +12,9 @@ import Contacts from './pages/Contacts';
 import Footer from './components/Footer';
 import NotFound from './pages/NotFound';
 import ContactForm from './pages/ContactForm';
+import ViewProjects from './pages/ViewProjects';
+
+import {ScrollProvider} from './utils/ScrollContext';
 
 function App() {
   useEffect(() => {
@@ -24,27 +27,28 @@ function App() {
   }, []);
 
   return (
-    <Router>
-      <div className="App">
-        <Routes>
-          <Route path="/" element={
-            <>
-              <NavigationBar />
-              <Heropage />
-              <About />
-              <Service />
-              <Projects />
-              <Contacts />
-              <Footer />
-            </>
-          } />
-
-          <Route path="/notfound" element={<NotFound />} />
-          <Route path="/get-in-touch" element={<ContactForm />} />
-
-        </Routes>
-      </div>
-    </Router>
+    <ScrollProvider>
+      <Router>
+        <div className="App">
+          <NavigationBar />
+          <Routes>
+            <Route path="/" element={
+              <>
+                <Heropage />
+                <About />
+                <Service />
+                <Projects />
+                <Contacts />
+                <Footer />
+              </>
+            } />
+            <Route path="/get-in-touch" element={<ContactForm />} />
+            <Route path="/view-projects" element={<ViewProjects />} />
+            <Route path="*" element={<NotFound />} />
+          </Routes>
+        </div>
+      </Router>
+    </ScrollProvider>
   );
 }
 
